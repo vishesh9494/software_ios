@@ -1,0 +1,146 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "student"
+provides-nominal:
+- "C11room_manage7student"
+provides-member:
+- ["C11room_manage7student", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "user"
+- "Int"
+- "student"
+- !private "BooleanLiteralType"
+- "Void"
+- "String"
+- "Bool"
+- "AssignmentPrecedence"
+depends-member:
+- !private ["Ps9AnyObject", "change_email"]
+- !private ["Ps9AnyObject", "change_password"]
+- ["Ps9AnyObject", "change_room"]
+- ["Ps9AnyObject", "gender"]
+- ["Ps9AnyObject", "get_gender"]
+- ["Ps9AnyObject", "get_mobile"]
+- ["Ps9AnyObject", "get_name"]
+- ["Ps9AnyObject", "get_programme"]
+- ["Ps9AnyObject", "get_roll"]
+- ["Ps9AnyObject", "get_room"]
+- ["Ps9AnyObject", "get_room_no"]
+- ["Ps9AnyObject", "get_year"]
+- !private ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "mobile"]
+- ["Ps9AnyObject", "name"]
+- ["Ps9AnyObject", "programme"]
+- ["Ps9AnyObject", "request_room"]
+- ["Ps9AnyObject", "roll"]
+- ["Ps9AnyObject", "room"]
+- ["Ps9AnyObject", "set_email"]
+- ["Ps9AnyObject", "set_gender"]
+- ["Ps9AnyObject", "set_mobile"]
+- ["Ps9AnyObject", "set_name"]
+- ["Ps9AnyObject", "set_password"]
+- ["Ps9AnyObject", "set_programme"]
+- ["Ps9AnyObject", "set_roll"]
+- ["Ps9AnyObject", "set_room"]
+- ["Ps9AnyObject", "set_room_no"]
+- ["Ps9AnyObject", "set_year"]
+- ["Ps9AnyObject", "view_alloted_room"]
+- ["Ps9AnyObject", "year"]
+- ["Ps9AnyObject", ""]
+- ["Sb", "deinit"]
+- ["SQ", "deinit"]
+- ["Si", "deinit"]
+- ["C11room_manage7student", "Bool"]
+- ["C11room_manage7student", "Int"]
+- ["C11room_manage7student", "String"]
+- ["C11room_manage7student", "Void"]
+- !private ["C11room_manage7student", "change_email"]
+- !private ["C11room_manage7student", "change_password"]
+- ["C11room_manage7student", "change_room"]
+- ["C11room_manage7student", "deinit"]
+- !private ["C11room_manage7student", "gender"]
+- ["C11room_manage7student", "get_gender"]
+- ["C11room_manage7student", "get_mobile"]
+- ["C11room_manage7student", "get_name"]
+- ["C11room_manage7student", "get_programme"]
+- ["C11room_manage7student", "get_roll"]
+- ["C11room_manage7student", "get_room"]
+- ["C11room_manage7student", "get_room_no"]
+- ["C11room_manage7student", "get_year"]
+- ["C11room_manage7student", "init"]
+- !private ["C11room_manage7student", "mobile"]
+- !private ["C11room_manage7student", "name"]
+- !private ["C11room_manage7student", "programme"]
+- ["C11room_manage7student", "request_room"]
+- !private ["C11room_manage7student", "roll"]
+- !private ["C11room_manage7student", "room"]
+- ["C11room_manage7student", "set_email"]
+- ["C11room_manage7student", "set_gender"]
+- ["C11room_manage7student", "set_mobile"]
+- ["C11room_manage7student", "set_name"]
+- ["C11room_manage7student", "set_password"]
+- ["C11room_manage7student", "set_programme"]
+- ["C11room_manage7student", "set_roll"]
+- ["C11room_manage7student", "set_room"]
+- ["C11room_manage7student", "set_room_no"]
+- ["C11room_manage7student", "set_year"]
+- ["C11room_manage7student", "view_alloted_room"]
+- !private ["C11room_manage7student", "year"]
+- ["C11room_manage4user", "Bool"]
+- ["C11room_manage4user", "Int"]
+- ["C11room_manage4user", "String"]
+- ["C11room_manage4user", "Void"]
+- !private ["C11room_manage4user", "change_email"]
+- !private ["C11room_manage4user", "change_password"]
+- ["C11room_manage4user", "change_room"]
+- ["C11room_manage4user", "deinit"]
+- ["C11room_manage4user", "gender"]
+- ["C11room_manage4user", "get_gender"]
+- ["C11room_manage4user", "get_mobile"]
+- ["C11room_manage4user", "get_name"]
+- ["C11room_manage4user", "get_programme"]
+- ["C11room_manage4user", "get_roll"]
+- ["C11room_manage4user", "get_room"]
+- ["C11room_manage4user", "get_room_no"]
+- ["C11room_manage4user", "get_year"]
+- ["C11room_manage4user", "init"]
+- ["C11room_manage4user", "mobile"]
+- ["C11room_manage4user", "name"]
+- ["C11room_manage4user", "programme"]
+- ["C11room_manage4user", "request_room"]
+- ["C11room_manage4user", "roll"]
+- ["C11room_manage4user", "room"]
+- ["C11room_manage4user", "set_email"]
+- ["C11room_manage4user", "set_gender"]
+- ["C11room_manage4user", "set_mobile"]
+- ["C11room_manage4user", "set_name"]
+- ["C11room_manage4user", "set_password"]
+- ["C11room_manage4user", "set_programme"]
+- ["C11room_manage4user", "set_roll"]
+- ["C11room_manage4user", "set_room"]
+- ["C11room_manage4user", "set_room_no"]
+- ["C11room_manage4user", "set_year"]
+- ["C11room_manage4user", "view_alloted_room"]
+- ["C11room_manage4user", "year"]
+- ["C11room_manage4user", ""]
+depends-nominal:
+- "Ps9AnyObject"
+- "Sb"
+- "SQ"
+- "Si"
+- "C11room_manage7student"
+- "C11room_manage4user"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+interface-hash: "1720b91242e87190fffd2eab3d187ba8"
