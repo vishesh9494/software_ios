@@ -7,13 +7,13 @@ provides-member:
 - ["C11room_manage15databaseManager", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "URL"
-- "String"
+- "student"
 - "URLRequest"
 - "StringLiteralType"
-- "databaseManager"
+- "URL"
+- "String"
 - "AssignmentPrecedence"
-- "student"
+- "databaseManager"
 depends-member:
 - ["Ps9AnyObject", "URL"]
 - ["Ps9AnyObject", "URLRequest"]
@@ -24,6 +24,7 @@ depends-member:
 - !private ["Ps9AnyObject", "get_password"]
 - !private ["Ps9AnyObject", "get_programme"]
 - !private ["Ps9AnyObject", "get_roll"]
+- !private ["Ps9AnyObject", "get_room"]
 - !private ["Ps9AnyObject", "get_year"]
 - ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", ""]
@@ -97,6 +98,7 @@ depends-member:
 - !private ["C11room_manage7student", "get_password"]
 - !private ["C11room_manage7student", "get_programme"]
 - !private ["C11room_manage7student", "get_roll"]
+- !private ["C11room_manage7student", "get_room"]
 - !private ["C11room_manage7student", "get_year"]
 - !private ["C11room_manage4user", "get_email"]
 - !private ["C11room_manage4user", "get_gender"]
@@ -105,6 +107,7 @@ depends-member:
 - !private ["C11room_manage4user", "get_password"]
 - !private ["C11room_manage4user", "get_programme"]
 - !private ["C11room_manage4user", "get_roll"]
+- !private ["C11room_manage4user", "get_room"]
 - !private ["C11room_manage4user", "get_year"]
 depends-nominal:
 - "Ps9AnyObject"

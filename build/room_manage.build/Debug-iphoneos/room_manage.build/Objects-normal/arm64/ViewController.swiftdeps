@@ -6,19 +6,19 @@ provides-nominal:
 provides-member:
 - ["C11room_manage14ViewController", ""]
 provides-dynamic-lookup:
-- "login"
-- "didReceiveMemoryWarning"
-- "img"
-- "sgn"
 - "viewDidLoad"
+- "didReceiveMemoryWarning"
+- "sgn"
+- "img"
+- "login"
 depends-top-level:
-- !private "UIImage"
-- "baseviewcontroller"
 - "ViewController"
-- !private "StringLiteralType"
 - !private "BooleanLiteralType"
-- "UIImageView"
+- !private "StringLiteralType"
+- "baseviewcontroller"
+- !private "UIImage"
 - "AssignmentPrecedence"
+- "UIImageView"
 depends-member:
 - !private ["Ps9AnyObject", "UIImage"]
 - !private ["Ps9AnyObject", "UIImageView"]

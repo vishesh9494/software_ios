@@ -146,9 +146,11 @@ SWIFT_CLASS("_TtC11room_manage18baseviewcontroller")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIImageView;
 
 SWIFT_CLASS("_TtC11room_manage14ViewController")
 @interface ViewController : baseviewcontroller
+@property (nonatomic, strong) IBOutlet UIImageView * _Null_unspecified img;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (IBAction)sgn:(id _Nonnull)sender;

@@ -8,8 +8,8 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "String"
-- "Int"
 - "room"
+- "Int"
 depends-member:
 - ["Ps9AnyObject", ""]
 - ["SQ", "deinit"]

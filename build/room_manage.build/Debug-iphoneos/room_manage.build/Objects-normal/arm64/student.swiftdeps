@@ -8,15 +8,15 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "Bool"
+- "Void"
+- "Int"
+- "student"
 - !private "BooleanLiteralType"
 - "String"
-- "IntegerLiteralType"
-- "Void"
 - "FloatLiteralType"
-- "student"
-- "user"
+- "IntegerLiteralType"
 - "AssignmentPrecedence"
-- "Int"
+- "user"
 depends-member:
 - !private ["Ps9AnyObject", "change_email"]
 - !private ["Ps9AnyObject", "change_password"]

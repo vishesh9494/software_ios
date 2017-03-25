@@ -6,23 +6,23 @@ provides-nominal:
 provides-member:
 - ["C11room_manage10getDetails", ""]
 provides-dynamic-lookup:
-- "room"
-- "programme"
-- "mobile"
 - "viewDidLoad"
-- "back"
-- "name"
-- "gender"
-- "year"
 - "roll"
+- "programme"
+- "name"
+- "year"
+- "mobile"
+- "gender"
+- "room"
+- "back"
 depends-top-level:
 - "getDetails"
-- "UILabel"
-- !private "BooleanLiteralType"
-- !private "String"
-- "baseviewcontroller"
 - "AssignmentPrecedence"
+- "baseviewcontroller"
+- !private "String"
+- !private "BooleanLiteralType"
 - "student"
+- "UILabel"
 depends-member:
 - !private ["Ps9AnyObject", "String"]
 - ["Ps9AnyObject", "back"]

@@ -6,23 +6,23 @@ provides-nominal:
 provides-member:
 - ["C11room_manage11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationWillEnterForeground"
-- "applicationDidBecomeActive"
-- "application"
-- "applicationDidEnterBackground"
 - "applicationWillResignActive"
 - "window"
+- "applicationWillEnterForeground"
+- "applicationDidBecomeActive"
 - "applicationWillTerminate"
+- "application"
+- "applicationDidEnterBackground"
 depends-top-level:
-- "UIResponder"
-- !private "BooleanLiteralType"
-- "UIWindow"
-- "student"
-- "AppDelegate"
-- "Bool"
 - "UIApplicationDelegate"
 - "UIApplicationLaunchOptionsKey"
+- "UIResponder"
+- "Bool"
+- "student"
+- "UIWindow"
+- !private "BooleanLiteralType"
 - "UIApplication"
+- "AppDelegate"
 depends-member:
 - ["Ps9AnyObject", "application"]
 - ["Ps9AnyObject", "applicationDidBecomeActive"]

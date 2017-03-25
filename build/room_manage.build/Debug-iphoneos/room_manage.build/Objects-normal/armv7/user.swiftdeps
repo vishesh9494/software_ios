@@ -7,11 +7,11 @@ provides-member:
 - ["C11room_manage4user", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "AssignmentPrecedence"
-- "String"
-- "user"
-- "StringLiteralType"
 - "Void"
+- "StringLiteralType"
+- "String"
+- "AssignmentPrecedence"
+- "user"
 depends-member:
 - !private ["Ps9AnyObject", "email"]
 - ["Ps9AnyObject", "init"]

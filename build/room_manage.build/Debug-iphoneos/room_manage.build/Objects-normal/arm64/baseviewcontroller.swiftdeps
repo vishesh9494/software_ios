@@ -8,17 +8,17 @@ provides-member:
 provides-dynamic-lookup:
 - "validateString"
 depends-top-level:
-- "String"
+- !private "BooleanLiteralType"
+- !private "NSString"
 - !private ">"
-- !private "=="
-- "AssignmentPrecedence"
 - "UIViewController"
+- "String"
 - "CastingPrecedence"
 - "baseviewcontroller"
-- !private "CharacterSet"
+- !private "=="
+- "AssignmentPrecedence"
 - "Bool"
-- !private "NSString"
-- !private "BooleanLiteralType"
+- !private "CharacterSet"
 depends-member:
 - !private ["Ps9AnyObject", "CharacterSet"]
 - !private ["Ps9AnyObject", "init"]

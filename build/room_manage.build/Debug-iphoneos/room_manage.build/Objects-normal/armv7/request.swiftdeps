@@ -7,10 +7,10 @@ provides-member:
 - ["C11room_manage7request", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- "String"
 - "request"
 - "Int"
 - "AssignmentPrecedence"
-- "String"
 depends-member:
 - !private ["Ps9AnyObject", "String"]
 - !private ["Ps9AnyObject", "req_room"]

@@ -7,13 +7,13 @@ provides-member:
 - ["C11room_manage15databaseManager", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "StringLiteralType"
-- "String"
+- "student"
 - "URLRequest"
 - "URL"
-- "databaseManager"
-- "student"
+- "String"
 - "AssignmentPrecedence"
+- "databaseManager"
+- "StringLiteralType"
 depends-member:
 - ["Ps9AnyObject", "URL"]
 - ["Ps9AnyObject", "URLRequest"]

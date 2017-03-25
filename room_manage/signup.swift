@@ -140,19 +140,16 @@ class signup:baseviewcontroller,UITextFieldDelegate,UIPickerViewDelegate,UIPicke
                 }
                 do{
                     let json=try JSONSerialization.jsonObject(with: data, options: .allowFragments ) as! NSArray
-                    
                 }
                 catch{
                     
                 }
-                
                 if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200{
                     print("statusCode should be 200 but is \(httpStatus.statusCode)")
                     print("response=\(response)")
                 }
                 let responseString = String(data: data,encoding: .utf8)
                 print("responseString=\(responseString)")
-                
                 let sheet=UIAlertController.init(title: "User successully created", message: nil, preferredStyle: .alert)
                 let okay=UIAlertAction.init(title: "OK", style: .default){
                     (ACTION) -> Void in
@@ -188,7 +185,6 @@ class signup:baseviewcontroller,UITextFieldDelegate,UIPickerViewDelegate,UIPicke
                     self.view.alpha=0.5
                 }*/
             }
-            
             task.resume()
             
         }

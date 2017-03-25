@@ -7,12 +7,12 @@ provides-member:
 - ["C11room_manage3hmc", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- "hmc"
+- !private "StringLiteralType"
+- "String"
+- "user"
 - "student"
 - "Void"
-- "String"
-- "hmc"
-- "user"
-- !private "StringLiteralType"
 depends-member:
 - ["Ps9AnyObject", "allot_rooms"]
 - !private ["Ps9AnyObject", "change_email"]
