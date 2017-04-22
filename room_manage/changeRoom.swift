@@ -17,6 +17,31 @@ class changeRoom: baseviewcontroller{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.addDoneButtonOnKeyboard()
+    }
+    
+    func doneButtonAction() {
+        self.room.resignFirstResponder()
+    }
+    
+    func addDoneButtonOnKeyboard() {
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        doneToolbar.barStyle       = UIBarStyle.default
+        let flexSpace              = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let done: UIBarButtonItem  = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(self.doneButtonAction))
+        
+        var items = [UIBarButtonItem]()
+        items.append(flexSpace)
+        items.append(done)
+        
+        doneToolbar.items = items
+        doneToolbar.sizeToFit()
+        
+        self.room.inputAccessoryView = doneToolbar
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        AppUtility.lockOrientation(.portrait)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -44,34 +69,21 @@ class changeRoom: baseviewcontroller{
                 req.set_student(EmailID: stud.get_email())
                 req.set_status(st: "Pending")
             
-            var request1 = URLRequest(url: URL(string: "http://onetouch.16mb.com/room_manage/requestroom.php")!)
-            request1.httpMethod = "POST"
-            let postString:String = "email=\(req.get_student())&Room=\(req.get_room())&Status=\(req.get_status())"
-            request1.httpBody = postString.data(using: .utf8)
-            let task = URLSession.shared.dataTask(with: request1) { data, response, error in
-                guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                    print("error=\(error)")
-                    return
-                }
-                do{
-                    let json=try JSONSerialization.jsonObject(with: data, options: .allowFragments ) as! NSArray
-                }
-                catch{
-                    
-                }
+            let db=DatabaseManager()
+            var dict:NSDictionary=["email":req.get_student(),"Room":req.get_room(),"Status":req.get_status()]
+            var flag = false
+            db.GeneratePostString(dict:dict)
+            if(isInternetAvailable()==true){
+            db.GetRequest(url: "http://onetouch.16mb.com/room_manage/requestroom.php")
+            DispatchQueue.global(qos: .userInteractive).async {
+                flag=db.CreateTask(view: self.view)
                 
-                if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200{
-                    print("statusCode should be 200 but is \(httpStatus.statusCode)")
-                    print("response=\(response)")
-                }
-                let responseString = String(data: data,encoding: .utf8)
-                print("responseString=\(responseString)")
             }
-            
-            task.resume()
-            sleep(2);
-
+            while(flag != true){
                 
+            }
+            var array=(db.getjson())[0] as! [String:String]
+            
                 let sheet = UIAlertController.init(title: "Request sent to HMC", message: nil, preferredStyle: .alert)
                 let okay = UIAlertAction.init(title: "OK", style: .default){
                     (ACTION) -> Void in
@@ -81,6 +93,18 @@ class changeRoom: baseviewcontroller{
                 sheet.addAction(okay)
                 self.present(sheet, animated: true, completion: nil)
                 self.view.alpha=0.5
+            }
+            else{
+                let sheet=UIAlertController.init(title: "Please check your Internet connection", message: nil, preferredStyle: .alert)
+                let okay=UIAlertAction.init(title: "OK", style: .default){
+                    (ACTION) -> Void in
+                    sheet.dismiss(animated: true, completion: nil)
+                    self.view.alpha=1.0
+                }
+                sheet.addAction(okay)
+                self.present(sheet, animated: true, completion: nil)
+                self.view.alpha=0.5
+            }
             }
         }
         else{

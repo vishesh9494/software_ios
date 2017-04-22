@@ -10,13 +10,17 @@ import UIKit
 
 class ViewController: baseviewcontroller {
 
+    @IBOutlet weak var back: UIImageView!
     @IBOutlet var img: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        var image:UIImage = UIImage(named: "room.jpg")!
-        img = UIImageView(image:image)
-        
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        AppUtility.lockOrientation(.portrait)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "login")
+        self.present(vc!, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,8 +29,8 @@ class ViewController: baseviewcontroller {
     }
 
     @IBAction func sgn(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "signup")
-        self.present(vc!, animated: true, completion: nil)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "StudentSignup") as! StudentSignup
+        self.present(vc, animated: true, completion: nil)
     }
 
     @IBAction func login(_ sender: Any) {

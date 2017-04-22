@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A0E31931E96CABB00D5FB81 /* StudentSignup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E31921E96CABB00D5FB81 /* StudentSignup.swift */; };
+		7A0E31951E9781DF00D5FB81 /* orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E31941E9781DF00D5FB81 /* orientation.swift */; };
+		7A23134A1E8BBDB900205A26 /* border.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A2313491E8BBDB900205A26 /* border.png */; };
 		7A819BD51E615F2C00641021 /* studentLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A819BD41E615F2C00641021 /* studentLogin.swift */; };
+		7A81B03C1EA7A28500382CCC /* back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A81B03B1EA7A28500382CCC /* back.jpg */; };
+		7A81B0401EA7A42A00382CCC /* hostel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A81B03F1EA7A42A00382CCC /* hostel.jpg */; };
+		7A81B0421EA7A87F00382CCC /* hostel1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A81B0411EA7A87F00382CCC /* hostel1.jpg */; };
+		7A84D2181E8FBFDA00D7A1A2 /* room1_206.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A84D2171E8FBFDA00D7A1A2 /* room1_206.jpg */; };
 		7A9912BD1E5EFE6B00EF7E9B /* databaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9912BC1E5EFE6B00EF7E9B /* databaseManager.swift */; };
 		7A9912BF1E5F13C000EF7E9B /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9912BE1E5F13C000EF7E9B /* login.swift */; };
 		7AD1879F1E5C70400053CE67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD1879E1E5C70400053CE67 /* AppDelegate.swift */; };
@@ -52,7 +59,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A0E31921E96CABB00D5FB81 /* StudentSignup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentSignup.swift; sourceTree = "<group>"; };
+		7A0E31941E9781DF00D5FB81 /* orientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orientation.swift; sourceTree = "<group>"; };
+		7A2313491E8BBDB900205A26 /* border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border.png; sourceTree = "<group>"; };
 		7A819BD41E615F2C00641021 /* studentLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = studentLogin.swift; sourceTree = "<group>"; };
+		7A81B03B1EA7A28500382CCC /* back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back.jpg; sourceTree = "<group>"; };
+		7A81B03F1EA7A42A00382CCC /* hostel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hostel.jpg; sourceTree = "<group>"; };
+		7A81B0411EA7A87F00382CCC /* hostel1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hostel1.jpg; sourceTree = "<group>"; };
+		7A84D2171E8FBFDA00D7A1A2 /* room1_206.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = room1_206.jpg; sourceTree = "<group>"; };
 		7A9912BC1E5EFE6B00EF7E9B /* databaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = databaseManager.swift; sourceTree = "<group>"; };
 		7A9912BE1E5F13C000EF7E9B /* login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 		7AD1879B1E5C70400053CE67 /* room_manage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = room_manage.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +124,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A2313481E8BBD9800205A26 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7A84D2171E8FBFDA00D7A1A2 /* room1_206.jpg */,
+				7A2313491E8BBDB900205A26 /* border.png */,
+				7A81B03B1EA7A28500382CCC /* back.jpg */,
+				7A81B0411EA7A87F00382CCC /* hostel1.jpg */,
+				7A81B03F1EA7A42A00382CCC /* hostel.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		7AD187921E5C70400053CE67 = {
 			isa = PBXGroup;
 			children = (
@@ -133,7 +159,10 @@
 		7AD1879D1E5C70400053CE67 /* room_manage */ = {
 			isa = PBXGroup;
 			children = (
+				7A2313481E8BBD9800205A26 /* Images */,
+				7A9912BE1E5F13C000EF7E9B /* login.swift */,
 				7AD1879E1E5C70400053CE67 /* AppDelegate.swift */,
+				7A0E31941E9781DF00D5FB81 /* orientation.swift */,
 				7AD187A01E5C70400053CE67 /* ViewController.swift */,
 				7AD187A21E5C70400053CE67 /* Main.storyboard */,
 				7AD187CC1E5C70810053CE67 /* user.swift */,
@@ -148,14 +177,14 @@
 				7AE1AEE51E646A9500F7EEA9 /* getStudDetails.swift */,
 				7AE1AEE11E646A7D00F7EEA9 /* viewRequests.swift */,
 				7AE1AEEB1E6475AC00F7EEA9 /* customCell.swift */,
-				7AD187D81E5C7F7D0053CE67 /* signup.swift */,
+				7A0E31921E96CABB00D5FB81 /* StudentSignup.swift */,
 				7A9912BC1E5EFE6B00EF7E9B /* databaseManager.swift */,
-				7A9912BE1E5F13C000EF7E9B /* login.swift */,
 				7AD187D41E5C7AE80053CE67 /* room.swift */,
 				7AD187D61E5C7B4A0053CE67 /* request.swift */,
 				7AD187D01E5C742B0053CE67 /* hmc.swift */,
 				7AD187A51E5C70400053CE67 /* Assets.xcassets */,
 				7AD187A71E5C70400053CE67 /* LaunchScreen.storyboard */,
+				7AD187D81E5C7F7D0053CE67 /* signup.swift */,
 				7AD187AA1E5C70400053CE67 /* Info.plist */,
 			);
 			path = room_manage;
@@ -289,10 +318,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A81B0401EA7A42A00382CCC /* hostel.jpg in Resources */,
 				7AF6A2DF1E6A92EA00B8B1C2 /* room.jpg in Resources */,
 				7AD187A91E5C70400053CE67 /* LaunchScreen.storyboard in Resources */,
 				7AD187A61E5C70400053CE67 /* Assets.xcassets in Resources */,
+				7A81B0421EA7A87F00382CCC /* hostel1.jpg in Resources */,
 				7AD187A41E5C70400053CE67 /* Main.storyboard in Resources */,
+				7A81B03C1EA7A28500382CCC /* back.jpg in Resources */,
+				7A23134A1E8BBDB900205A26 /* border.png in Resources */,
+				7A84D2181E8FBFDA00D7A1A2 /* room1_206.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +356,7 @@
 				7AE1AEEC1E6475AC00F7EEA9 /* customCell.swift in Sources */,
 				7AE1AEE61E646A9500F7EEA9 /* getStudDetails.swift in Sources */,
 				7A9912BD1E5EFE6B00EF7E9B /* databaseManager.swift in Sources */,
+				7A0E31951E9781DF00D5FB81 /* orientation.swift in Sources */,
 				7AD187A11E5C70400053CE67 /* ViewController.swift in Sources */,
 				7AD187D71E5C7B4A0053CE67 /* request.swift in Sources */,
 				7AE1AEDE1E6458CB00F7EEA9 /* changeRoom.swift in Sources */,
@@ -336,6 +371,7 @@
 				7AE1AEE21E646A7D00F7EEA9 /* viewRequests.swift in Sources */,
 				7AD187D51E5C7AE80053CE67 /* room.swift in Sources */,
 				7AD187CF1E5C72D40053CE67 /* student.swift in Sources */,
+				7A0E31931E96CABB00D5FB81 /* StudentSignup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

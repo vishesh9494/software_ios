@@ -6,24 +6,27 @@ provides-nominal:
 provides-member:
 - ["C11room_manage11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationWillEnterForeground"
-- "applicationDidEnterBackground"
-- "applicationWillResignActive"
-- "window"
-- "applicationWillTerminate"
-- "applicationDidBecomeActive"
 - "application"
+- "applicationDidBecomeActive"
+- "applicationDidEnterBackground"
+- "applicationWillEnterForeground"
+- "applicationWillResignActive"
+- "applicationWillTerminate"
+- "orientationLock"
+- "window"
 depends-top-level:
-- "Bool"
-- "UIWindow"
-- "UIApplication"
-- "student"
-- "UIApplicationLaunchOptionsKey"
-- "UIApplicationDelegate"
 - "AppDelegate"
-- "UIResponder"
+- "Bool"
 - !private "BooleanLiteralType"
+- "UIApplication"
+- "UIApplicationDelegate"
+- "UIApplicationLaunchOptionsKey"
+- "UIInterfaceOrientationMask"
+- "UIResponder"
+- "UIWindow"
+- "student"
 depends-member:
+- ["Ps9AnyObject", "UIInterfaceOrientationMask"]
 - ["Ps9AnyObject", "application"]
 - ["Ps9AnyObject", "applicationDidBecomeActive"]
 - ["Ps9AnyObject", "applicationDidEnterBackground"]
@@ -37,13 +40,14 @@ depends-member:
 - ["Ps9AnyObject", "applicationWillResignActive"]
 - ["Ps9AnyObject", "applicationWillTerminate"]
 - ["Ps9AnyObject", "init"]
-- ["Ps9AnyObject", "stud1"]
+- !private ["Ps9AnyObject", "orientationLock"]
 - ["Ps9AnyObject", "student"]
 - ["Ps9AnyObject", "window"]
 - ["Ps9AnyObject", ""]
 - ["C11room_manage11AppDelegate", "Bool"]
 - ["C11room_manage11AppDelegate", "UIApplication"]
 - ["C11room_manage11AppDelegate", "UIApplicationLaunchOptionsKey"]
+- ["C11room_manage11AppDelegate", "UIInterfaceOrientationMask"]
 - ["C11room_manage11AppDelegate", "UIWindow"]
 - ["C11room_manage11AppDelegate", "application"]
 - ["C11room_manage11AppDelegate", "applicationDidBecomeActive"]
@@ -59,10 +63,11 @@ depends-member:
 - ["C11room_manage11AppDelegate", "applicationWillTerminate"]
 - ["C11room_manage11AppDelegate", "deinit"]
 - ["C11room_manage11AppDelegate", "init"]
+- ["C11room_manage11AppDelegate", "orientationLock"]
 - ["C11room_manage11AppDelegate", "stud1"]
 - ["C11room_manage11AppDelegate", "student"]
 - ["C11room_manage11AppDelegate", "window"]
-- ["Sb", "deinit"]
+- ["Ps7CVarArg", "UIInterfaceOrientationMask"]
 - ["Ps7CVarArg", "application"]
 - ["Ps7CVarArg", "applicationDidBecomeActive"]
 - ["Ps7CVarArg", "applicationDidEnterBackground"]
@@ -76,10 +81,11 @@ depends-member:
 - ["Ps7CVarArg", "applicationWillResignActive"]
 - ["Ps7CVarArg", "applicationWillTerminate"]
 - !private ["Ps7CVarArg", "init"]
-- ["Ps7CVarArg", "stud1"]
+- !private ["Ps7CVarArg", "orientationLock"]
 - ["Ps7CVarArg", "student"]
 - ["Ps7CVarArg", "window"]
 - ["Ps7CVarArg", ""]
+- ["Ps28CustomDebugStringConvertible", "UIInterfaceOrientationMask"]
 - ["Ps28CustomDebugStringConvertible", "application"]
 - ["Ps28CustomDebugStringConvertible", "applicationDidBecomeActive"]
 - ["Ps28CustomDebugStringConvertible", "applicationDidEnterBackground"]
@@ -93,10 +99,11 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "applicationWillResignActive"]
 - ["Ps28CustomDebugStringConvertible", "applicationWillTerminate"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
-- ["Ps28CustomDebugStringConvertible", "stud1"]
+- !private ["Ps28CustomDebugStringConvertible", "orientationLock"]
 - ["Ps28CustomDebugStringConvertible", "student"]
 - ["Ps28CustomDebugStringConvertible", "window"]
 - ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "UIInterfaceOrientationMask"]
 - ["Ps23CustomStringConvertible", "application"]
 - ["Ps23CustomStringConvertible", "applicationDidBecomeActive"]
 - ["Ps23CustomStringConvertible", "applicationDidEnterBackground"]
@@ -110,10 +117,12 @@ depends-member:
 - ["Ps23CustomStringConvertible", "applicationWillResignActive"]
 - ["Ps23CustomStringConvertible", "applicationWillTerminate"]
 - !private ["Ps23CustomStringConvertible", "init"]
-- ["Ps23CustomStringConvertible", "stud1"]
+- !private ["Ps23CustomStringConvertible", "orientationLock"]
 - ["Ps23CustomStringConvertible", "student"]
 - ["Ps23CustomStringConvertible", "window"]
 - ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "UIInterfaceOrientationMask"]
+- ["Ps9Equatable", "all"]
 - ["Ps9Equatable", "application"]
 - ["Ps9Equatable", "applicationDidBecomeActive"]
 - ["Ps9Equatable", "applicationDidEnterBackground"]
@@ -127,10 +136,12 @@ depends-member:
 - ["Ps9Equatable", "applicationWillResignActive"]
 - ["Ps9Equatable", "applicationWillTerminate"]
 - !private ["Ps9Equatable", "init"]
-- ["Ps9Equatable", "stud1"]
+- !private ["Ps9Equatable", "orientationLock"]
 - ["Ps9Equatable", "student"]
 - ["Ps9Equatable", "window"]
 - ["Ps9Equatable", ""]
+- ["Ps25ExpressibleByArrayLiteral", "all"]
+- ["Ps8Hashable", "UIInterfaceOrientationMask"]
 - ["Ps8Hashable", "application"]
 - ["Ps8Hashable", "applicationDidBecomeActive"]
 - ["Ps8Hashable", "applicationDidEnterBackground"]
@@ -144,13 +155,14 @@ depends-member:
 - ["Ps8Hashable", "applicationWillResignActive"]
 - ["Ps8Hashable", "applicationWillTerminate"]
 - !private ["Ps8Hashable", "init"]
-- ["Ps8Hashable", "stud1"]
+- !private ["Ps8Hashable", "orientationLock"]
 - ["Ps8Hashable", "student"]
 - ["Ps8Hashable", "window"]
 - ["Ps8Hashable", ""]
 - ["CSo8NSObject", "Bool"]
 - ["CSo8NSObject", "UIApplication"]
 - ["CSo8NSObject", "UIApplicationLaunchOptionsKey"]
+- ["CSo8NSObject", "UIInterfaceOrientationMask"]
 - ["CSo8NSObject", "UIWindow"]
 - ["CSo8NSObject", "application"]
 - ["CSo8NSObject", "applicationDidBecomeActive"]
@@ -165,9 +177,11 @@ depends-member:
 - ["CSo8NSObject", "applicationWillResignActive"]
 - ["CSo8NSObject", "applicationWillTerminate"]
 - ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "orientationLock"]
 - ["CSo8NSObject", "stud1"]
 - ["CSo8NSObject", "student"]
 - ["CSo8NSObject", "window"]
+- ["PSo16NSObjectProtocol", "UIInterfaceOrientationMask"]
 - ["PSo16NSObjectProtocol", "application"]
 - ["PSo16NSObjectProtocol", "applicationDidBecomeActive"]
 - ["PSo16NSObjectProtocol", "applicationDidEnterBackground"]
@@ -181,11 +195,14 @@ depends-member:
 - ["PSo16NSObjectProtocol", "applicationWillResignActive"]
 - ["PSo16NSObjectProtocol", "applicationWillTerminate"]
 - !private ["PSo16NSObjectProtocol", "init"]
-- ["PSo16NSObjectProtocol", "stud1"]
+- !private ["PSo16NSObjectProtocol", "orientationLock"]
 - ["PSo16NSObjectProtocol", "student"]
 - ["PSo16NSObjectProtocol", "window"]
 - ["PSo16NSObjectProtocol", ""]
-- ["Sq", "deinit"]
+- ["Ps9OptionSet", "all"]
+- ["Ps16RawRepresentable", "all"]
+- ["Ps10SetAlgebra", "all"]
+- ["PSo21UIApplicationDelegate", "UIInterfaceOrientationMask"]
 - ["PSo21UIApplicationDelegate", "application"]
 - ["PSo21UIApplicationDelegate", "applicationDidBecomeActive"]
 - ["PSo21UIApplicationDelegate", "applicationDidEnterBackground"]
@@ -198,12 +215,15 @@ depends-member:
 - ["PSo21UIApplicationDelegate", "applicationWillEnterForeground"]
 - ["PSo21UIApplicationDelegate", "applicationWillResignActive"]
 - ["PSo21UIApplicationDelegate", "applicationWillTerminate"]
+- !private ["PSo21UIApplicationDelegate", "orientationLock"]
 - ["PSo21UIApplicationDelegate", "student"]
 - ["PSo21UIApplicationDelegate", "window"]
 - ["PSo21UIApplicationDelegate", ""]
+- ["VSC26UIInterfaceOrientationMask", "all"]
 - ["CSo11UIResponder", "Bool"]
 - ["CSo11UIResponder", "UIApplication"]
 - ["CSo11UIResponder", "UIApplicationLaunchOptionsKey"]
+- ["CSo11UIResponder", "UIInterfaceOrientationMask"]
 - ["CSo11UIResponder", "UIWindow"]
 - ["CSo11UIResponder", "application"]
 - ["CSo11UIResponder", "applicationDidBecomeActive"]
@@ -217,12 +237,13 @@ depends-member:
 - ["CSo11UIResponder", "applicationWillEnterForeground"]
 - ["CSo11UIResponder", "applicationWillResignActive"]
 - ["CSo11UIResponder", "applicationWillTerminate"]
-- ["CSo11UIResponder", "deinit"]
 - ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "orientationLock"]
 - ["CSo11UIResponder", "stud1"]
 - ["CSo11UIResponder", "student"]
 - ["CSo11UIResponder", "window"]
 - ["CSo11UIResponder", ""]
+- ["PSo30UIResponderStandardEditActions", "UIInterfaceOrientationMask"]
 - ["PSo30UIResponderStandardEditActions", "application"]
 - ["PSo30UIResponderStandardEditActions", "applicationDidBecomeActive"]
 - ["PSo30UIResponderStandardEditActions", "applicationDidEnterBackground"]
@@ -236,10 +257,11 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "applicationWillResignActive"]
 - ["PSo30UIResponderStandardEditActions", "applicationWillTerminate"]
 - !private ["PSo30UIResponderStandardEditActions", "init"]
-- ["PSo30UIResponderStandardEditActions", "stud1"]
+- !private ["PSo30UIResponderStandardEditActions", "orientationLock"]
 - ["PSo30UIResponderStandardEditActions", "student"]
 - ["PSo30UIResponderStandardEditActions", "window"]
 - ["PSo30UIResponderStandardEditActions", ""]
+- ["Ps9_Hashable", "UIInterfaceOrientationMask"]
 - ["Ps9_Hashable", "application"]
 - ["Ps9_Hashable", "applicationDidBecomeActive"]
 - ["Ps9_Hashable", "applicationDidEnterBackground"]
@@ -253,26 +275,28 @@ depends-member:
 - ["Ps9_Hashable", "applicationWillResignActive"]
 - ["Ps9_Hashable", "applicationWillTerminate"]
 - !private ["Ps9_Hashable", "init"]
-- ["Ps9_Hashable", "stud1"]
+- !private ["Ps9_Hashable", "orientationLock"]
 - ["Ps9_Hashable", "student"]
 - ["Ps9_Hashable", "window"]
 - ["Ps9_Hashable", ""]
-- ["C11room_manage7student", "deinit"]
 - ["C11room_manage7student", "init"]
 - ["C11room_manage4user", "init"]
 depends-nominal:
 - "Ps9AnyObject"
 - "C11room_manage11AppDelegate"
-- "Sb"
 - "Ps7CVarArg"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
 - "Ps9Equatable"
+- "Ps25ExpressibleByArrayLiteral"
 - "Ps8Hashable"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
-- "Sq"
+- "Ps9OptionSet"
+- "Ps16RawRepresentable"
+- "Ps10SetAlgebra"
 - "PSo21UIApplicationDelegate"
+- "VSC26UIInterfaceOrientationMask"
 - "CSo11UIResponder"
 - "PSo30UIResponderStandardEditActions"
 - "Ps9_Hashable"
@@ -283,11 +307,17 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.apinotesc"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.apinotesc"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-interface-hash: "7862e239a82b4c85c240f8d202e1c4d8"
+interface-hash: "7835e27ed1824b644caee38f8d43962d"

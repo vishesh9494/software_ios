@@ -24,7 +24,7 @@ class getStudDetails: baseviewcontroller{
     }
     
     @IBAction func submit(_ sender: Any) {
-        if(validateString(email.text!)){
+        if(validateString(email.text!) && isValidEmail(testStr: email.text!)){
             if(email.text=="hmc@iitj.ac.in" || email.text=="cs@iitj.ac.in"){
                 let sheet = UIAlertController.init(title: "Email not of a student", message: nil, preferredStyle: .alert)
                 let okay = UIAlertAction.init(title: "OK", style: .default){
@@ -40,19 +40,21 @@ class getStudDetails: baseviewcontroller{
                 var inDatabase:Bool!
                 //check if email is in database
                 
+                let db=DatabaseManager()
+                var dict:NSDictionary=["email":email.text!]
+                var flag = false
+                db.GeneratePostString(dict:dict)
+                if(isInternetAvailable()==true){
+                db.GetRequest(url: "http://onetouch.16mb.com/room_manage/getstuddetails.php")
+                DispatchQueue.global(qos: .userInteractive).async {
+                    flag=db.CreateTask(view: self.view)
+                    
+                }
+                while(flag != true){
+                    
+                }
+                var pjson=(db.getjson())[0] as! [String:String]
                 
-                var request = URLRequest(url: URL(string: "http://onetouch.16mb.com/room_manage/getstuddetails.php")!)
-                request.httpMethod = "POST"
-                let postString:String = "email=\(email.text!)"
-                request.httpBody = postString.data(using: .utf8)
-                let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                    guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                        print("error=\(error)")
-                        return
-                    }
-                    do{
-                        let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments ) as! NSArray
-                        let pjson=json[0] as! [String:String]
                         if(pjson["flag"] == "1"){
                             inDatabase=true;
                             self.stud.set_name(nm: pjson["Name"]);
@@ -67,28 +69,7 @@ class getStudDetails: baseviewcontroller{
                         else{
                             inDatabase=false
                         }
-                        
-                        
-                        
-                    }
-                    catch{
-                    }
-                    if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200{
-                        print("statusCode should be 200 but is \(httpStatus.statusCode)")
-                        print("response=\(response)")
-                    }
-                    let responseString = String(data: data,encoding: .utf8)
-                    print("responseString=\(responseString)")
-                }
-                
-                task.resume()
-                sleep(5);
-
-                
-                
-                
-                
-                
+    
                 //email is in database
                 if(inDatabase == true){
                     //save all details of student in 'stud' object
@@ -99,6 +80,18 @@ class getStudDetails: baseviewcontroller{
                 else{
                     let sheet = UIAlertController.init(title: "Email not in database", message: nil, preferredStyle: .alert)
                     let okay = UIAlertAction.init(title: "OK", style: .default){
+                        (ACTION) -> Void in
+                        sheet.dismiss(animated: true, completion: nil)
+                        self.view.alpha=1.0
+                    }
+                    sheet.addAction(okay)
+                    self.present(sheet, animated: true, completion: nil)
+                    self.view.alpha=0.5
+                }
+                }
+                else{
+                    let sheet=UIAlertController.init(title: "Please check your Internet connection", message: nil, preferredStyle: .alert)
+                    let okay=UIAlertAction.init(title: "OK", style: .default){
                         (ACTION) -> Void in
                         sheet.dismiss(animated: true, completion: nil)
                         self.view.alpha=1.0
@@ -120,6 +113,10 @@ class getStudDetails: baseviewcontroller{
             self.present(sheet, animated: true, completion: nil)
             self.view.alpha=0.5
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        AppUtility.lockOrientation(.portrait)
     }
     
     @IBAction func cancel(_ sender: Any) {

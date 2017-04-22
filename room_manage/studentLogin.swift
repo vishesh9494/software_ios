@@ -44,12 +44,26 @@ class studentLogin: baseviewcontroller,UIAlertViewDelegate{
             view2.isHidden = false
             view3.isHidden = false
             view4.isHidden = false
-            room.text = String(stud.get_room())
-        }
+                    }
     }
 
     @IBAction func logout(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        let sheet = UIAlertController.init(title: "Are you sure?", message: nil, preferredStyle: .alert)
+        let okay = UIAlertAction.init(title: "Yes", style: .default){
+            (ACTION) -> Void in
+            sheet.dismiss(animated: true, completion: nil)
+            self.view.alpha=1.0
+            self.dismiss(animated: true, completion: nil)
+        }
+        let no = UIAlertAction.init(title: "No", style: .destructive){
+            (ACTION) -> Void in
+            sheet.dismiss(animated: true, completion: nil)
+            self.view.alpha=1.0
+        }
+        sheet.addAction(okay)
+        sheet.addAction(no)
+        self.present(sheet, animated: true, completion: nil)
+        self.view.alpha=0.5
     }
     
     @IBAction func requestRoom(_ sender: Any) {
@@ -72,6 +86,17 @@ class studentLogin: baseviewcontroller,UIAlertViewDelegate{
             vc.stud = stud
             self.present(vc, animated: true, completion: nil)
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        AppUtility.lockOrientation(.portrait)
+        if(String(stud.get_room()) != "0"){
+            room.text = String(stud.get_room())
+        }
+        else{
+            room.text = "Not Alloted"
+        }
+
     }
     
     @IBAction func changeRoom(_ sender: Any) {

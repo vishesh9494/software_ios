@@ -20,39 +20,39 @@ class hmcLogin: baseviewcontroller{
         self.present(vc!, animated: true, completion: nil)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        AppUtility.lockOrientation(.portrait)
+    }
+    
     @IBAction func allot_rooms(_ sender: Any) {
         
-        
-        var request1 = URLRequest(url: URL(string: "http://onetouch.16mb.com/room_manage/allotrooms.php")!)
-        request1.httpMethod = "POST"
-        let postString:String = ""
-        request1.httpBody = postString.data(using: .utf8)
-        let task = URLSession.shared.dataTask(with: request1) { data, response, error in
-            guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                print("error=\(error)")
+        let db=DatabaseManager()
+        var dict:NSDictionary=[:]
+        var flag = false
+        db.GeneratePostString(dict:dict)
+        if(isInternetAvailable()==true){
+        db.GetRequest(url: "http://onetouch.16mb.com/room_manage/allotrooms.php")
+        DispatchQueue.global(qos: .userInteractive).async {
+            flag=db.CreateTask(view: self.view)
+            
+        }
+        while(flag != true){
+            
+        }
+        var json=(db.getjson())[0] as! [String:String]
+            if(json["flag"]=="1"){
+                let sheet=UIAlertController.init(title: "No new rooms to allot", message: nil, preferredStyle: .alert)
+                let okay=UIAlertAction.init(title: "OK", style: .default){
+                    (ACTION) -> Void in
+                    sheet.dismiss(animated: true, completion: nil)
+                    self.view.alpha=1.0
+                }
+                sheet.addAction(okay)
+                self.present(sheet, animated: true, completion: nil)
+                self.view.alpha=0.5
                 return
             }
-            do{
-                let json=try JSONSerialization.jsonObject(with: data, options: .allowFragments ) as! NSArray
-            }
-            catch{
-                
-            }
-            
-            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200{
-                print("statusCode should be 200 but is \(httpStatus.statusCode)")
-                print("response=\(response)")
-            }
-            let responseString = String(data: data,encoding: .utf8)
-            print("responseString=\(responseString)")
-        }
-        
-        task.resume()
-        sleep(4);
-
-        
-        
-        let sheet = UIAlertController.init(title: "Rooms Alloted", message: nil, preferredStyle: .alert)
+        let sheet = UIAlertController.init(title: "Rooms Allotted", message: nil, preferredStyle: .alert)
         let okay = UIAlertAction.init(title: "OK", style: .default){
             (ACTION) -> Void in
             sheet.dismiss(animated: true, completion: nil)
@@ -61,6 +61,18 @@ class hmcLogin: baseviewcontroller{
         sheet.addAction(okay)
         self.present(sheet, animated: true, completion: nil)
         self.view.alpha=0.5
+        }
+        else{
+            let sheet=UIAlertController.init(title: "Please check your Internet connection", message: nil, preferredStyle: .alert)
+            let okay=UIAlertAction.init(title: "OK", style: .default){
+                (ACTION) -> Void in
+                sheet.dismiss(animated: true, completion: nil)
+                self.view.alpha=1.0
+            }
+            sheet.addAction(okay)
+            self.present(sheet, animated: true, completion: nil)
+            self.view.alpha=0.5
+        }
     }
     
     @IBAction func get_stud(_ sender: Any) {
@@ -68,6 +80,21 @@ class hmcLogin: baseviewcontroller{
         self.present(vc!, animated: true, completion: nil)
     }
     @IBAction func logout(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        let sheet = UIAlertController.init(title: "Are you sure?", message: nil, preferredStyle: .alert)
+        let okay = UIAlertAction.init(title: "Yes", style: .default){
+            (ACTION) -> Void in
+            sheet.dismiss(animated: true, completion: nil)
+            self.view.alpha=1.0
+            self.dismiss(animated: true, completion: nil)
+        }
+        let no = UIAlertAction.init(title: "No", style: .destructive){
+            (ACTION) -> Void in
+            sheet.dismiss(animated: true, completion: nil)
+            self.view.alpha=1.0
+        }
+        sheet.addAction(okay)
+        sheet.addAction(no)
+        self.present(sheet, animated: true, completion: nil)
+        self.view.alpha=0.5
     }
 }

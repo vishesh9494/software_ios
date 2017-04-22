@@ -1,19 +1,21 @@
-/Users/divyanshaggarwal/Desktop/SOFTWARE PROJECT/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/signup.o
-/Users/divyanshaggarwal/Desktop/SOFTWARE PROJECT/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/getDetails.o
-/Users/divyanshaggarwal/Desktop/SOFTWARE PROJECT/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/customCell.o
-/Users/divyanshaggarwal/Desktop/SOFTWARE PROJECT/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/getStudDetails.o
-/Users/divyanshaggarwal/Desktop/SOFTWARE PROJECT/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/databaseManager.o
-/Users/divyanshaggarwal/Desktop/SOFTWARE PROJECT/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/ViewController.o
-/Users/divyanshaggarwal/Desktop/SOFTWARE PROJECT/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/request.o
-/Users/divyanshaggarwal/Desktop/SOFTWARE PROJECT/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/changeRoom.o
-/Users/divyanshaggarwal/Desktop/SOFTWARE PROJECT/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/AppDelegate.o
-/Users/divyanshaggarwal/Desktop/SOFTWARE PROJECT/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/requestRoom.o
-/Users/divyanshaggarwal/Desktop/SOFTWARE PROJECT/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/baseviewcontroller.o
-/Users/divyanshaggarwal/Desktop/SOFTWARE PROJECT/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/login.o
-/Users/divyanshaggarwal/Desktop/SOFTWARE PROJECT/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/hmcLogin.o
-/Users/divyanshaggarwal/Desktop/SOFTWARE PROJECT/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/studentLogin.o
-/Users/divyanshaggarwal/Desktop/SOFTWARE PROJECT/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/user.o
-/Users/divyanshaggarwal/Desktop/SOFTWARE PROJECT/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/hmc.o
-/Users/divyanshaggarwal/Desktop/SOFTWARE PROJECT/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/viewRequests.o
-/Users/divyanshaggarwal/Desktop/SOFTWARE PROJECT/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/room.o
-/Users/divyanshaggarwal/Desktop/SOFTWARE PROJECT/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/student.o
+/Users/vishesh/Downloads/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/signup.o
+/Users/vishesh/Downloads/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/getDetails.o
+/Users/vishesh/Downloads/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/customCell.o
+/Users/vishesh/Downloads/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/getStudDetails.o
+/Users/vishesh/Downloads/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/databaseManager.o
+/Users/vishesh/Downloads/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/orientation.o
+/Users/vishesh/Downloads/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/ViewController.o
+/Users/vishesh/Downloads/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/request.o
+/Users/vishesh/Downloads/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/changeRoom.o
+/Users/vishesh/Downloads/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/AppDelegate.o
+/Users/vishesh/Downloads/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/requestRoom.o
+/Users/vishesh/Downloads/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/baseviewcontroller.o
+/Users/vishesh/Downloads/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/login.o
+/Users/vishesh/Downloads/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/hmcLogin.o
+/Users/vishesh/Downloads/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/studentLogin.o
+/Users/vishesh/Downloads/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/user.o
+/Users/vishesh/Downloads/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/hmc.o
+/Users/vishesh/Downloads/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/viewRequests.o
+/Users/vishesh/Downloads/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/room.o
+/Users/vishesh/Downloads/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/student.o
+/Users/vishesh/Downloads/room_manage/build/room_manage.build/Debug-iphonesimulator/room_manage.build/Objects-normal/x86_64/StudentSignup.o

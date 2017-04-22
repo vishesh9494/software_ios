@@ -9,8 +9,9 @@
 import Foundation
 import UIKit
 
-class signup:baseviewcontroller,UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UIAlertViewDelegate{
+class signup:baseviewcontroller,UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UIAlertViewDelegate,UIScrollViewDelegate{
     
+    @IBOutlet var scrl: UIScrollView!
     @IBOutlet weak var room: UITextField!
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var roll: UITextField!
@@ -25,12 +26,25 @@ class signup:baseviewcontroller,UITextFieldDelegate,UIPickerViewDelegate,UIPicke
     var gend1:String!
     var stud:student! = student()
     var yr = [1,2,3,4]
+    var yr_1 = [1,2,3]
     var yr1:Int!
-    var prg = ["UG","PG","M.Sc","M.Tech","PhD"]
+    var prg = ["UG","M.Sc","M.Tech","PhD"]
     var prg1:String!
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        scrl.isScrollEnabled = true
+        email.resignFirstResponder()
+        mobile.resignFirstResponder()
+        name.resignFirstResponder()
+        roll.resignFirstResponder()
+        password.resignFirstResponder()
+        room.resignFirstResponder()
+        scrl.setContentOffset(CGPoint(x:0,y:0), animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        scrl.delegate = self
         //scroll.delegate=self
         //scroll.isUserInteractionEnabled=true
         //scroll.contentSize = view.frame.size
@@ -41,6 +55,12 @@ class signup:baseviewcontroller,UITextFieldDelegate,UIPickerViewDelegate,UIPicke
         programme.delegate=self
         year.dataSource=self
         year.delegate=self
+        name.delegate=self
+        roll.delegate=self
+        mobile.delegate=self
+        room.delegate=self
+        email.delegate=self
+        password.delegate=self
         gend1=gend[0]
         yr1=yr[0]
         prg1=prg[0]
@@ -51,6 +71,9 @@ class signup:baseviewcontroller,UITextFieldDelegate,UIPickerViewDelegate,UIPicke
         password.text!=""
         room.text!=""
         room.isUserInteractionEnabled = false
+        self.view.isUserInteractionEnabled=true
+        scrl.canCancelContentTouches=false
+        scrl.delaysContentTouches=true
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -102,6 +125,7 @@ class signup:baseviewcontroller,UITextFieldDelegate,UIPickerViewDelegate,UIPicke
         if(pickerView==year){
             yr1=yr[row]
             if(yr1==1){
+                room.text=""
                 room.isUserInteractionEnabled = false
             }
             else{
@@ -116,10 +140,11 @@ class signup:baseviewcontroller,UITextFieldDelegate,UIPickerViewDelegate,UIPicke
         mobile.text="234824"
         email.text = "nine"
         password.text = "pass"
+        AppUtility.lockOrientation(.portrait)
     }
     
     @IBAction func sgnup(_ sender: Any) {
-        if(validateString(name.text!) && validateString(roll.text!) && validateString(mobile.text!) && validateString(email.text!) && validateString(password.text!)){
+        if(validateString(name.text!) && validateString(roll.text!) && validateString(mobile.text!) && validateString(email.text!) && validateString(password.text!) && isValidEmail(testStr: email.text!) && isValidMobile(testStr: mobile.text!)){
             stud.set_mobile(mob: mobile.text)
             stud.set_name(nm: name.text)
             stud.set_year(yr: yr1)
@@ -128,64 +153,66 @@ class signup:baseviewcontroller,UITextFieldDelegate,UIPickerViewDelegate,UIPicke
             stud.set_roll(rll: roll.text)
             stud.set_email(em: email.text)
             stud.set_password(pass: password.text)
-            let db = databaseManager()
-            var request = URLRequest(url: URL(string: "http://onetouch.16mb.com/room_manage/signup.php")!)
-            request.httpMethod = "POST"
-            let postString:String = db.generatepost(stud: stud)
-            request.httpBody = postString.data(using: .utf8)
-            let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                    print("error=\(error)")
-                    return
-                }
-                do{
-                    let json=try JSONSerialization.jsonObject(with: data, options: .allowFragments ) as! NSArray
-                }
-                catch{
-                    
-                }
-                if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200{
-                    print("statusCode should be 200 but is \(httpStatus.statusCode)")
-                    print("response=\(response)")
-                }
-                let responseString = String(data: data,encoding: .utf8)
-                print("responseString=\(responseString)")
-                let sheet=UIAlertController.init(title: "User successully created", message: nil, preferredStyle: .alert)
+            
+            let db=DatabaseManager()
+            var dict:NSDictionary=["name":stud.get_name(),"roll":stud.get_roll(),"mobile":stud.get_mobile(),"Email":stud.get_email(),"room":stud.get_room(),"programme":stud.get_programme(),"year":stud.get_year(),"gender":stud.get_gender(),"password":stud.get_password()]
+            var flag = false
+            db.GeneratePostString(dict:dict)
+            if(isInternetAvailable()==false){
+                let sheet=UIAlertController.init(title: "Please check your Internet connection", message: nil, preferredStyle: .alert)
                 let okay=UIAlertAction.init(title: "OK", style: .default){
                     (ACTION) -> Void in
                     sheet.dismiss(animated: true, completion: nil)
-                    self.dismiss(animated: true, completion: nil)
                     self.view.alpha=1.0
                 }
                 sheet.addAction(okay)
                 self.present(sheet, animated: true, completion: nil)
                 self.view.alpha=0.5
-                //check if responseString is giving success or failure
-                /*if(responseString=="error failed to connect to database"){
-                    let sheet=UIAlertController.init(title: "Check your internet connection ", message: nil, preferredStyle: .alert)
-                    let okay=UIAlertAction.init(title: "OK", style: .default){
-                        (ACTION) -> Void in
-                        sheet.dismiss(animated: true, completion: nil)
-                        self.view.alpha=1.0
-                    }
-                    sheet.addAction(okay)
-                    self.present(sheet, animated: true, completion: nil)
-                    self.view.alpha=0.5
-                }
-                else if(responseString=="Already exists in the database"){
-                    let sheet=UIAlertController.init(title: "The entered username already exists", message: "Try Again", preferredStyle: .alert)
-                    let okay=UIAlertAction.init(title: "OK", style: .default){
-                        (ACTION) -> Void in
-                        sheet.dismiss(animated: true, completion: nil)
-                        self.dismiss(animated: true, completion: nil)
-                        self.view.alpha=1.0
-                    }
-                    sheet.addAction(okay)
-                    self.present(sheet, animated: true, completion: nil)
-                    self.view.alpha=0.5
-                }*/
+                return
             }
-            task.resume()
+            db.GetRequest(url: "http://onetouch.16mb.com/room_manage/signup.php")
+            DispatchQueue.global(qos: .userInteractive).async {
+                flag=db.CreateTask(view: self.view)
+                
+            }
+            while(flag != true){
+                
+            }
+            let json=(db.getjson())[0] as! [String:String]
+            if(json["flag"]=="0"){
+                let sheet=UIAlertController.init(title: "Username already exists", message: nil, preferredStyle: .alert)
+                let okay=UIAlertAction.init(title: "OK", style: .default){
+                    (ACTION) -> Void in
+                    sheet.dismiss(animated: true, completion: nil)
+                    self.view.alpha=1.0
+                }
+                sheet.addAction(okay)
+                self.present(sheet, animated: true, completion: nil)
+                self.view.alpha=0.5
+            }
+            else if(json["flag"]=="1"){
+                let sheet=UIAlertController.init(title: "Roll Number already exists", message: nil, preferredStyle: .alert)
+                let okay=UIAlertAction.init(title: "OK", style: .default){
+                    (ACTION) -> Void in
+                    sheet.dismiss(animated: true, completion: nil)
+                    self.view.alpha=1.0
+                }
+                sheet.addAction(okay)
+                self.present(sheet, animated: true, completion: nil)
+                self.view.alpha=0.5
+            }
+            else if(json["flag"]=="2"){
+                let sheet=UIAlertController.init(title: "The provided Room Number does not exist", message: nil, preferredStyle: .alert)
+                let okay=UIAlertAction.init(title: "OK", style: .default){
+                    (ACTION) -> Void in
+                    sheet.dismiss(animated: true, completion: nil)
+                    self.view.alpha=1.0
+                }
+                sheet.addAction(okay)
+                self.present(sheet, animated: true, completion: nil)
+                self.view.alpha=0.5
+            }
+            
             
         }
         else{
@@ -199,6 +226,7 @@ class signup:baseviewcontroller,UITextFieldDelegate,UIPickerViewDelegate,UIPicke
             self.present(sheet, animated: true, completion: nil)
             self.view.alpha=0.5
         }
+
     }
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

@@ -16,43 +16,30 @@ class viewRequests: baseviewcontroller,UITableViewDataSource,UITableViewDelegate
     func storeRequests(){
         //store all requests from database to this array
         
-        var request1 = URLRequest(url: URL(string: "http://onetouch.16mb.com/room_manage/viewrequests.php")!)
-        request1.httpMethod = "POST"
-        let postString:String = ""
-        request1.httpBody = postString.data(using: .utf8)
-        let task = URLSession.shared.dataTask(with: request1) { data, response, error in
-            guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                print("error=\(error)")
-                return
-            }
-            do{
-                let json=try JSONSerialization.jsonObject(with: data, options: .allowFragments ) as! NSArray
-                if(json.count != 0){
-                    for i in 0 ... json.count-1{
-                        var req:request=request()
-                        req.set_student(EmailID: (json[i] as! [String:String])["EmailID"]!)
-                        req.set_room(rm: Int((json[i] as! [String:String])["room"]!)!)
-                        req.set_status(st: (json[i] as! [String:String])["Status"]!)
-                        self.array.append(req)
-                    }
-
-                }
-                
-            }
-            catch{
-                
+        let db=DatabaseManager()
+        var dict:NSDictionary=[:]
+        var flag = false
+        db.GeneratePostString(dict:dict)
+        db.GetRequest(url: "http://onetouch.16mb.com/room_manage/viewrequests.php")
+        DispatchQueue.global(qos: .userInteractive).async {
+            flag=db.CreateTask(view: self.view)
+            
+        }
+        while(flag != true){
+            
+        }
+        var json=(db.getjson())
+        
+        if(json.count != 0){
+            for i in 0 ... json.count-1{
+                var req:request=request()
+                req.set_student(EmailID: (json[i] as! [String:String])["EmailID"]!)
+                req.set_room(rm: Int((json[i] as! [String:String])["room"]!)!)
+                req.set_status(st: (json[i] as! [String:String])["Status"]!)
+                self.array.append(req)
             }
             
-            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200{
-                print("statusCode should be 200 but is \(httpStatus.statusCode)")
-                print("response=\(response)")
-            }
-            let responseString = String(data: data,encoding: .utf8)
-            print("responseString=\(responseString)")
         }
-        
-        task.resume()
-        sleep(4);
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -74,80 +61,74 @@ class viewRequests: baseviewcontroller,UITableViewDataSource,UITableViewDelegate
             (ACTION) -> Void in
             //accept the request and update in database
             
-            var request1 = URLRequest(url: URL(string: "http://onetouch.16mb.com/room_manage/acceptrequest.php")!)
-            request1.httpMethod = "POST"
-            let postString:String = "accept=\(1)&EmailID=\(self.array[indexPath.row].get_student())&room=\(self.array[indexPath.row].get_room())"
-            request1.httpBody = postString.data(using: .utf8)
-            let task = URLSession.shared.dataTask(with: request1) { data, response, error in
-                guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                    print("error=\(error)")
-                    return
-                }
-                do{
-                    let json=try JSONSerialization.jsonObject(with: data, options: .allowFragments ) as! NSArray
-                }
-                catch{
-                    
-                }
+            let db=DatabaseManager()
+            var dict:NSDictionary=["accept":1,"EmailID":self.array[indexPath.row].get_student(),"room":self.array[indexPath.row].get_room()]
+            var flag = false
+            db.GeneratePostString(dict:dict)
+            if(self.isInternetAvailable()==true){
+            db.GetRequest(url: "http://onetouch.16mb.com/room_manage/acceptrequest.php")
+            DispatchQueue.global(qos: .userInteractive).async {
+                flag=db.CreateTask(view: self.view)
                 
-                if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200{
-                    print("statusCode should be 200 but is \(httpStatus.statusCode)")
-                    print("response=\(response)")
-                }
-                let responseString = String(data: data,encoding: .utf8)
-                print("responseString=\(responseString)")
             }
-            
-            task.resume()
-            sleep(2);
-
-            
-            
-            
+            while(flag != true){
+                
+            }
             
             self.array.remove(at: indexPath.row)
             self.tbl.reloadData()
             sheet.dismiss(animated: true, completion: nil)
+            }
+            else{
+                let sheet=UIAlertController.init(title: "Please check your Internet connection", message: nil, preferredStyle: .alert)
+                let okay=UIAlertAction.init(title: "OK", style: .default){
+                    (ACTION) -> Void in
+                    sheet.dismiss(animated: true, completion: nil)
+                    self.view.alpha=1.0
+                }
+                sheet.addAction(okay)
+                self.present(sheet, animated: true, completion: nil)
+                self.view.alpha=0.5
+            }
         }
         let decline = UIAlertAction.init(title: "Decline", style: .default){
             (ACTION) -> Void in
             //decline the request and update in database
             
-            var request1 = URLRequest(url: URL(string: "http://onetouch.16mb.com/room_manage/acceptrequest.php")!)
-            request1.httpMethod = "POST"
-            let postString:String = "accept=\(0)"
-            request1.httpBody = postString.data(using: .utf8)
-            let task = URLSession.shared.dataTask(with: request1) { data, response, error in
-                guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                    print("error=\(error)")
-                    return
-                }
-                do{
-                    let json=try JSONSerialization.jsonObject(with: data, options: .allowFragments ) as! NSArray
-                }
-                catch{
-                    
-                }
+            let db=DatabaseManager()
+            var dict:NSDictionary=["accept":0]
+            var flag = false
+            db.GeneratePostString(dict:dict)
+            if(self.isInternetAvailable()==true){
+            db.GetRequest(url: "http://onetouch.16mb.com/room_manage/acceptrequest.php")
+            DispatchQueue.global(qos: .userInteractive).async {
+                flag=db.CreateTask(view: self.view)
                 
-                if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200{
-                    print("statusCode should be 200 but is \(httpStatus.statusCode)")
-                    print("response=\(response)")
-                }
-                let responseString = String(data: data,encoding: .utf8)
-                print("responseString=\(responseString)")
             }
-            
-            task.resume()
-            sleep(2);
-
+            while(flag != true){
+                
+            }
             
             self.array.remove(at: indexPath.row)
             self.tbl.reloadData()
             sheet.dismiss(animated: true, completion: nil)
+            }
+            else{
+                let sheet=UIAlertController.init(title: "Please check your Internet connection", message: nil, preferredStyle: .alert)
+                let okay=UIAlertAction.init(title: "OK", style: .default){
+                    (ACTION) -> Void in
+                    sheet.dismiss(animated: true, completion: nil)
+                    self.view.alpha=1.0
+                }
+                sheet.addAction(okay)
+                self.present(sheet, animated: true, completion: nil)
+                self.view.alpha=0.5
+            }
         }
         let can = UIAlertAction.init(title: "Cancel", style: .destructive){
             (ACTION) -> Void in
             sheet.dismiss(animated: true, completion: nil)
+            self.tbl.deselectRow(at: indexPath, animated: false)
         }
         sheet.addAction(accept)
         sheet.addAction(decline)
@@ -161,83 +142,79 @@ class viewRequests: baseviewcontroller,UITableViewDataSource,UITableViewDelegate
         super.viewDidLoad()
         tbl.delegate=self
         tbl.dataSource=self
+        tbl.tableFooterView = UIView()
         storeRequests()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         self.tbl.reloadData()
+        AppUtility.lockOrientation(.portrait)
     }
     
     @IBAction func acceptAll(_ sender: Any) {
         //accept all requests from the array
         
-        
-        var request1 = URLRequest(url: URL(string: "http://onetouch.16mb.com/room_manage/acceptall.php")!)
-        request1.httpMethod = "POST"
-        let postString:String = "accept=\(1)"
-        request1.httpBody = postString.data(using: .utf8)
-        let task = URLSession.shared.dataTask(with: request1) { data, response, error in
-            guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                print("error=\(error)")
-                return
-            }
-            do{
-                
-            }
-            catch{
-                
-            }
+        let db=DatabaseManager()
+        var dict:NSDictionary=["accept":1]
+        var flag = false
+        db.GeneratePostString(dict:dict)
+        if(isInternetAvailable()==true){
+        db.GetRequest(url: "http://onetouch.16mb.com/room_manage/acceptall.php")
+        DispatchQueue.global(qos: .userInteractive).async {
+            flag=db.CreateTask(view: self.view)
             
-            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200{
-                print("statusCode should be 200 but is \(httpStatus.statusCode)")
-                print("response=\(response)")
-            }
-            let responseString = String(data: data,encoding: .utf8)
-            print("responseString=\(responseString)")
         }
-        
-        task.resume()
-        sleep(2);
-
+        while(flag != true){
+            
+        }
         
         array.removeAll()
         self.tbl.reloadData()
+        }
+        else{
+            let sheet=UIAlertController.init(title: "Please check your Internet connection", message: nil, preferredStyle: .alert)
+            let okay=UIAlertAction.init(title: "OK", style: .default){
+                (ACTION) -> Void in
+                sheet.dismiss(animated: true, completion: nil)
+                self.view.alpha=1.0
+            }
+            sheet.addAction(okay)
+            self.present(sheet, animated: true, completion: nil)
+            self.view.alpha=0.5
+        }
     }
     
     @IBAction func declineAll(_ sender: Any) {
         //decline all requests from the array
         
-        var request1 = URLRequest(url: URL(string: "http://onetouch.16mb.com/room_manage/acceptall.php")!)
-        request1.httpMethod = "POST"
-        let postString:String = "accept=\(0)"
-        request1.httpBody = postString.data(using: .utf8)
-        let task = URLSession.shared.dataTask(with: request1) { data, response, error in
-            guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                print("error=\(error)")
-                return
-            }
-            do{
-                
-            }
-            catch{
-                
-            }
+        let db=DatabaseManager()
+        var dict:NSDictionary=["accept":0]
+        var flag = false
+        db.GeneratePostString(dict:dict)
+        if(isInternetAvailable()==true){
+        db.GetRequest(url: "http://onetouch.16mb.com/room_manage/acceptall.php")
+        DispatchQueue.global(qos: .userInteractive).async {
+            flag=db.CreateTask(view: self.view)
             
-            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200{
-                print("statusCode should be 200 but is \(httpStatus.statusCode)")
-                print("response=\(response)")
-            }
-            let responseString = String(data: data,encoding: .utf8)
-            print("responseString=\(responseString)")
         }
-        
-        task.resume()
-        sleep(2);
-
-        
+        while(flag != true){
+            
+        }
         
         array.removeAll()
         self.tbl.reloadData()
+        }
+        else{
+            let sheet=UIAlertController.init(title: "Please check your Internet connection", message: nil, preferredStyle: .alert)
+            let okay=UIAlertAction.init(title: "OK", style: .default){
+                (ACTION) -> Void in
+                sheet.dismiss(animated: true, completion: nil)
+                self.view.alpha=1.0
+            }
+            sheet.addAction(okay)
+            self.present(sheet, animated: true, completion: nil)
+            self.view.alpha=0.5
+        }
     }
     
     @IBAction func cancel(_ sender: Any) {

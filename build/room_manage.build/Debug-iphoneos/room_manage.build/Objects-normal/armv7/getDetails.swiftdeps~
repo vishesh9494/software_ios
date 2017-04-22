@@ -1,0 +1,510 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "getDetails"
+provides-nominal:
+- "C11room_manage10getDetails"
+provides-member:
+- ["C11room_manage10getDetails", ""]
+provides-dynamic-lookup:
+- "back"
+- "gender"
+- "mobile"
+- "name"
+- "programme"
+- "roll"
+- "room"
+- "viewDidAppear"
+- "viewDidLoad"
+- "year"
+depends-top-level:
+- !private "AppUtility"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- !private "String"
+- "UILabel"
+- "baseviewcontroller"
+- "getDetails"
+- "student"
+depends-member:
+- !private ["Ps9AnyObject", "AppUtility"]
+- !private ["Ps9AnyObject", "String"]
+- !private ["Ps9AnyObject", "dismiss"]
+- !private ["Ps9AnyObject", "gender"]
+- !private ["Ps9AnyObject", "get_gender"]
+- !private ["Ps9AnyObject", "get_mobile"]
+- !private ["Ps9AnyObject", "get_name"]
+- !private ["Ps9AnyObject", "get_programme"]
+- !private ["Ps9AnyObject", "get_roll"]
+- !private ["Ps9AnyObject", "get_room"]
+- !private ["Ps9AnyObject", "get_year"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "mobile"]
+- !private ["Ps9AnyObject", "name"]
+- !private ["Ps9AnyObject", "programme"]
+- !private ["Ps9AnyObject", "roll"]
+- !private ["Ps9AnyObject", "room"]
+- !private ["Ps9AnyObject", "stud"]
+- ["Ps9AnyObject", "student"]
+- !private ["Ps9AnyObject", "text"]
+- !private ["Ps9AnyObject", "viewDidLoad"]
+- !private ["Ps9AnyObject", "year"]
+- ["Ps9AnyObject", ""]
+- !private ["V11room_manage10AppUtility", "lockOrientation"]
+- !private ["PSo15CALayerDelegate", "text"]
+- !private ["Ps7CVarArg", "AppUtility"]
+- !private ["Ps7CVarArg", "String"]
+- !private ["Ps7CVarArg", "dismiss"]
+- !private ["Ps7CVarArg", "gender"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "mobile"]
+- !private ["Ps7CVarArg", "name"]
+- !private ["Ps7CVarArg", "programme"]
+- !private ["Ps7CVarArg", "roll"]
+- !private ["Ps7CVarArg", "room"]
+- !private ["Ps7CVarArg", "stud"]
+- ["Ps7CVarArg", "student"]
+- !private ["Ps7CVarArg", "text"]
+- !private ["Ps7CVarArg", "viewDidLoad"]
+- !private ["Ps7CVarArg", "year"]
+- ["Ps7CVarArg", ""]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "AppUtility"]
+- !private ["Ps28CustomDebugStringConvertible", "String"]
+- !private ["Ps28CustomDebugStringConvertible", "dismiss"]
+- !private ["Ps28CustomDebugStringConvertible", "gender"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "mobile"]
+- !private ["Ps28CustomDebugStringConvertible", "name"]
+- !private ["Ps28CustomDebugStringConvertible", "programme"]
+- !private ["Ps28CustomDebugStringConvertible", "roll"]
+- !private ["Ps28CustomDebugStringConvertible", "room"]
+- !private ["Ps28CustomDebugStringConvertible", "stud"]
+- ["Ps28CustomDebugStringConvertible", "student"]
+- !private ["Ps28CustomDebugStringConvertible", "text"]
+- !private ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- !private ["Ps28CustomDebugStringConvertible", "year"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "AppUtility"]
+- !private ["Ps23CustomStringConvertible", "String"]
+- !private ["Ps23CustomStringConvertible", "dismiss"]
+- !private ["Ps23CustomStringConvertible", "gender"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "mobile"]
+- !private ["Ps23CustomStringConvertible", "name"]
+- !private ["Ps23CustomStringConvertible", "programme"]
+- !private ["Ps23CustomStringConvertible", "roll"]
+- !private ["Ps23CustomStringConvertible", "room"]
+- !private ["Ps23CustomStringConvertible", "stud"]
+- ["Ps23CustomStringConvertible", "student"]
+- !private ["Ps23CustomStringConvertible", "text"]
+- !private ["Ps23CustomStringConvertible", "viewDidLoad"]
+- !private ["Ps23CustomStringConvertible", "year"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "AppUtility"]
+- !private ["Ps9Equatable", "String"]
+- !private ["Ps9Equatable", "dismiss"]
+- !private ["Ps9Equatable", "gender"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "mobile"]
+- !private ["Ps9Equatable", "name"]
+- !private ["Ps9Equatable", "portrait"]
+- !private ["Ps9Equatable", "programme"]
+- !private ["Ps9Equatable", "roll"]
+- !private ["Ps9Equatable", "room"]
+- !private ["Ps9Equatable", "stud"]
+- ["Ps9Equatable", "student"]
+- !private ["Ps9Equatable", "text"]
+- !private ["Ps9Equatable", "viewDidLoad"]
+- !private ["Ps9Equatable", "year"]
+- ["Ps9Equatable", ""]
+- !private ["Ps25ExpressibleByArrayLiteral", "portrait"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps8Hashable", "AppUtility"]
+- !private ["Ps8Hashable", "String"]
+- !private ["Ps8Hashable", "dismiss"]
+- !private ["Ps8Hashable", "gender"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "mobile"]
+- !private ["Ps8Hashable", "name"]
+- !private ["Ps8Hashable", "programme"]
+- !private ["Ps8Hashable", "roll"]
+- !private ["Ps8Hashable", "room"]
+- !private ["Ps8Hashable", "stud"]
+- ["Ps8Hashable", "student"]
+- !private ["Ps8Hashable", "text"]
+- !private ["Ps8Hashable", "viewDidLoad"]
+- !private ["Ps8Hashable", "year"]
+- ["Ps8Hashable", ""]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["PSo8NSCoding", "AppUtility"]
+- !private ["PSo8NSCoding", "String"]
+- !private ["PSo8NSCoding", "dismiss"]
+- !private ["PSo8NSCoding", "gender"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "mobile"]
+- !private ["PSo8NSCoding", "name"]
+- !private ["PSo8NSCoding", "programme"]
+- !private ["PSo8NSCoding", "roll"]
+- !private ["PSo8NSCoding", "room"]
+- !private ["PSo8NSCoding", "stud"]
+- ["PSo8NSCoding", "student"]
+- !private ["PSo8NSCoding", "text"]
+- !private ["PSo8NSCoding", "viewDidLoad"]
+- !private ["PSo8NSCoding", "year"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo26NSExtensionRequestHandling", "AppUtility"]
+- !private ["PSo26NSExtensionRequestHandling", "String"]
+- !private ["PSo26NSExtensionRequestHandling", "dismiss"]
+- !private ["PSo26NSExtensionRequestHandling", "gender"]
+- !private ["PSo26NSExtensionRequestHandling", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "mobile"]
+- !private ["PSo26NSExtensionRequestHandling", "name"]
+- !private ["PSo26NSExtensionRequestHandling", "programme"]
+- !private ["PSo26NSExtensionRequestHandling", "roll"]
+- !private ["PSo26NSExtensionRequestHandling", "room"]
+- !private ["PSo26NSExtensionRequestHandling", "stud"]
+- ["PSo26NSExtensionRequestHandling", "student"]
+- !private ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- !private ["PSo26NSExtensionRequestHandling", "year"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- !private ["CSo8NSObject", "AppUtility"]
+- ["CSo8NSObject", "Bool"]
+- !private ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "UILabel"]
+- ["CSo8NSObject", "back"]
+- !private ["CSo8NSObject", "dismiss"]
+- ["CSo8NSObject", "gender"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "mobile"]
+- ["CSo8NSObject", "name"]
+- ["CSo8NSObject", "programme"]
+- ["CSo8NSObject", "roll"]
+- ["CSo8NSObject", "room"]
+- ["CSo8NSObject", "stud"]
+- ["CSo8NSObject", "student"]
+- !private ["CSo8NSObject", "text"]
+- ["CSo8NSObject", "viewDidAppear"]
+- ["CSo8NSObject", "viewDidLoad"]
+- ["CSo8NSObject", "year"]
+- !private ["PSo16NSObjectProtocol", "AppUtility"]
+- !private ["PSo16NSObjectProtocol", "String"]
+- !private ["PSo16NSObjectProtocol", "dismiss"]
+- !private ["PSo16NSObjectProtocol", "gender"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "mobile"]
+- !private ["PSo16NSObjectProtocol", "name"]
+- !private ["PSo16NSObjectProtocol", "programme"]
+- !private ["PSo16NSObjectProtocol", "roll"]
+- !private ["PSo16NSObjectProtocol", "room"]
+- !private ["PSo16NSObjectProtocol", "stud"]
+- ["PSo16NSObjectProtocol", "student"]
+- !private ["PSo16NSObjectProtocol", "text"]
+- !private ["PSo16NSObjectProtocol", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "year"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["Ps9OptionSet", "portrait"]
+- !private ["Ps16RawRepresentable", "portrait"]
+- !private ["Ps10SetAlgebra", "portrait"]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "text"]
+- !private ["PSo12UIAppearance", "text"]
+- !private ["PSo21UIAppearanceContainer", "AppUtility"]
+- !private ["PSo21UIAppearanceContainer", "String"]
+- !private ["PSo21UIAppearanceContainer", "dismiss"]
+- !private ["PSo21UIAppearanceContainer", "gender"]
+- !private ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "mobile"]
+- !private ["PSo21UIAppearanceContainer", "name"]
+- !private ["PSo21UIAppearanceContainer", "programme"]
+- !private ["PSo21UIAppearanceContainer", "roll"]
+- !private ["PSo21UIAppearanceContainer", "room"]
+- !private ["PSo21UIAppearanceContainer", "stud"]
+- ["PSo21UIAppearanceContainer", "student"]
+- !private ["PSo21UIAppearanceContainer", "text"]
+- !private ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- !private ["PSo21UIAppearanceContainer", "year"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo18UIContentContainer", "AppUtility"]
+- !private ["PSo18UIContentContainer", "String"]
+- !private ["PSo18UIContentContainer", "dismiss"]
+- !private ["PSo18UIContentContainer", "gender"]
+- !private ["PSo18UIContentContainer", "init"]
+- !private ["PSo18UIContentContainer", "mobile"]
+- !private ["PSo18UIContentContainer", "name"]
+- !private ["PSo18UIContentContainer", "programme"]
+- !private ["PSo18UIContentContainer", "roll"]
+- !private ["PSo18UIContentContainer", "room"]
+- !private ["PSo18UIContentContainer", "stud"]
+- ["PSo18UIContentContainer", "student"]
+- !private ["PSo18UIContentContainer", "viewDidLoad"]
+- !private ["PSo18UIContentContainer", "year"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo30UIContentSizeCategoryAdjusting", "text"]
+- !private ["PSo17UICoordinateSpace", "text"]
+- !private ["PSo13UIDynamicItem", "text"]
+- !private ["PSo18UIFocusEnvironment", "AppUtility"]
+- !private ["PSo18UIFocusEnvironment", "String"]
+- !private ["PSo18UIFocusEnvironment", "dismiss"]
+- !private ["PSo18UIFocusEnvironment", "gender"]
+- !private ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "mobile"]
+- !private ["PSo18UIFocusEnvironment", "name"]
+- !private ["PSo18UIFocusEnvironment", "programme"]
+- !private ["PSo18UIFocusEnvironment", "roll"]
+- !private ["PSo18UIFocusEnvironment", "room"]
+- !private ["PSo18UIFocusEnvironment", "stud"]
+- ["PSo18UIFocusEnvironment", "student"]
+- !private ["PSo18UIFocusEnvironment", "text"]
+- !private ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- !private ["PSo18UIFocusEnvironment", "year"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo11UIFocusItem", "text"]
+- !private ["VSC26UIInterfaceOrientationMask", "portrait"]
+- !private ["CSo7UILabel", "text"]
+- !private ["CSo11UIResponder", "AppUtility"]
+- ["CSo11UIResponder", "Bool"]
+- !private ["CSo11UIResponder", "String"]
+- ["CSo11UIResponder", "UILabel"]
+- ["CSo11UIResponder", "back"]
+- !private ["CSo11UIResponder", "dismiss"]
+- ["CSo11UIResponder", "gender"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "mobile"]
+- ["CSo11UIResponder", "name"]
+- ["CSo11UIResponder", "programme"]
+- ["CSo11UIResponder", "roll"]
+- ["CSo11UIResponder", "room"]
+- ["CSo11UIResponder", "stud"]
+- ["CSo11UIResponder", "student"]
+- !private ["CSo11UIResponder", "text"]
+- ["CSo11UIResponder", "viewDidAppear"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- ["CSo11UIResponder", "year"]
+- !private ["PSo30UIResponderStandardEditActions", "AppUtility"]
+- !private ["PSo30UIResponderStandardEditActions", "String"]
+- !private ["PSo30UIResponderStandardEditActions", "dismiss"]
+- !private ["PSo30UIResponderStandardEditActions", "gender"]
+- !private ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "mobile"]
+- !private ["PSo30UIResponderStandardEditActions", "name"]
+- !private ["PSo30UIResponderStandardEditActions", "programme"]
+- !private ["PSo30UIResponderStandardEditActions", "roll"]
+- !private ["PSo30UIResponderStandardEditActions", "room"]
+- !private ["PSo30UIResponderStandardEditActions", "stud"]
+- ["PSo30UIResponderStandardEditActions", "student"]
+- !private ["PSo30UIResponderStandardEditActions", "text"]
+- !private ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
+- !private ["PSo30UIResponderStandardEditActions", "year"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- !private ["PSo16UIStateRestoring", "AppUtility"]
+- !private ["PSo16UIStateRestoring", "String"]
+- !private ["PSo16UIStateRestoring", "dismiss"]
+- !private ["PSo16UIStateRestoring", "gender"]
+- !private ["PSo16UIStateRestoring", "init"]
+- !private ["PSo16UIStateRestoring", "mobile"]
+- !private ["PSo16UIStateRestoring", "name"]
+- !private ["PSo16UIStateRestoring", "programme"]
+- !private ["PSo16UIStateRestoring", "roll"]
+- !private ["PSo16UIStateRestoring", "room"]
+- !private ["PSo16UIStateRestoring", "stud"]
+- ["PSo16UIStateRestoring", "student"]
+- !private ["PSo16UIStateRestoring", "viewDidLoad"]
+- !private ["PSo16UIStateRestoring", "year"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["PSo18UITraitEnvironment", "AppUtility"]
+- !private ["PSo18UITraitEnvironment", "String"]
+- !private ["PSo18UITraitEnvironment", "dismiss"]
+- !private ["PSo18UITraitEnvironment", "gender"]
+- !private ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "mobile"]
+- !private ["PSo18UITraitEnvironment", "name"]
+- !private ["PSo18UITraitEnvironment", "programme"]
+- !private ["PSo18UITraitEnvironment", "roll"]
+- !private ["PSo18UITraitEnvironment", "room"]
+- !private ["PSo18UITraitEnvironment", "stud"]
+- ["PSo18UITraitEnvironment", "student"]
+- !private ["PSo18UITraitEnvironment", "text"]
+- !private ["PSo18UITraitEnvironment", "viewDidLoad"]
+- !private ["PSo18UITraitEnvironment", "year"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "text"]
+- !private ["CSo16UIViewController", "AppUtility"]
+- ["CSo16UIViewController", "Bool"]
+- !private ["CSo16UIViewController", "String"]
+- ["CSo16UIViewController", "UILabel"]
+- ["CSo16UIViewController", "back"]
+- !private ["CSo16UIViewController", "dismiss"]
+- ["CSo16UIViewController", "gender"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "mobile"]
+- ["CSo16UIViewController", "name"]
+- ["CSo16UIViewController", "programme"]
+- ["CSo16UIViewController", "roll"]
+- ["CSo16UIViewController", "room"]
+- ["CSo16UIViewController", "stud"]
+- ["CSo16UIViewController", "student"]
+- ["CSo16UIViewController", "viewDidAppear"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", "year"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "text"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps33_ExpressibleByStringInterpolation", "init"]
+- !private ["Ps9_Hashable", "AppUtility"]
+- !private ["Ps9_Hashable", "String"]
+- !private ["Ps9_Hashable", "dismiss"]
+- !private ["Ps9_Hashable", "gender"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "mobile"]
+- !private ["Ps9_Hashable", "name"]
+- !private ["Ps9_Hashable", "programme"]
+- !private ["Ps9_Hashable", "roll"]
+- !private ["Ps9_Hashable", "room"]
+- !private ["Ps9_Hashable", "stud"]
+- ["Ps9_Hashable", "student"]
+- !private ["Ps9_Hashable", "text"]
+- !private ["Ps9_Hashable", "viewDidLoad"]
+- !private ["Ps9_Hashable", "year"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["C11room_manage18baseviewcontroller", "AppUtility"]
+- ["C11room_manage18baseviewcontroller", "Bool"]
+- !private ["C11room_manage18baseviewcontroller", "String"]
+- ["C11room_manage18baseviewcontroller", "UILabel"]
+- ["C11room_manage18baseviewcontroller", "back"]
+- !private ["C11room_manage18baseviewcontroller", "dismiss"]
+- ["C11room_manage18baseviewcontroller", "gender"]
+- ["C11room_manage18baseviewcontroller", "init"]
+- ["C11room_manage18baseviewcontroller", "mobile"]
+- ["C11room_manage18baseviewcontroller", "name"]
+- ["C11room_manage18baseviewcontroller", "programme"]
+- ["C11room_manage18baseviewcontroller", "roll"]
+- ["C11room_manage18baseviewcontroller", "room"]
+- ["C11room_manage18baseviewcontroller", "stud"]
+- ["C11room_manage18baseviewcontroller", "student"]
+- ["C11room_manage18baseviewcontroller", "viewDidAppear"]
+- ["C11room_manage18baseviewcontroller", "viewDidLoad"]
+- ["C11room_manage18baseviewcontroller", "year"]
+- ["C11room_manage18baseviewcontroller", ""]
+- !private ["C11room_manage10getDetails", "AppUtility"]
+- ["C11room_manage10getDetails", "Bool"]
+- !private ["C11room_manage10getDetails", "String"]
+- ["C11room_manage10getDetails", "UILabel"]
+- ["C11room_manage10getDetails", "back"]
+- ["C11room_manage10getDetails", "deinit"]
+- !private ["C11room_manage10getDetails", "dismiss"]
+- ["C11room_manage10getDetails", "gender"]
+- ["C11room_manage10getDetails", "init"]
+- ["C11room_manage10getDetails", "mobile"]
+- ["C11room_manage10getDetails", "name"]
+- ["C11room_manage10getDetails", "programme"]
+- ["C11room_manage10getDetails", "roll"]
+- ["C11room_manage10getDetails", "room"]
+- ["C11room_manage10getDetails", "stud"]
+- ["C11room_manage10getDetails", "student"]
+- ["C11room_manage10getDetails", "viewDidAppear"]
+- ["C11room_manage10getDetails", "viewDidLoad"]
+- ["C11room_manage10getDetails", "year"]
+- !private ["C11room_manage7student", "get_gender"]
+- !private ["C11room_manage7student", "get_mobile"]
+- !private ["C11room_manage7student", "get_name"]
+- !private ["C11room_manage7student", "get_programme"]
+- !private ["C11room_manage7student", "get_roll"]
+- !private ["C11room_manage7student", "get_room"]
+- !private ["C11room_manage7student", "get_year"]
+- ["C11room_manage7student", "init"]
+- !private ["C11room_manage4user", "get_gender"]
+- !private ["C11room_manage4user", "get_mobile"]
+- !private ["C11room_manage4user", "get_name"]
+- !private ["C11room_manage4user", "get_programme"]
+- !private ["C11room_manage4user", "get_roll"]
+- !private ["C11room_manage4user", "get_room"]
+- !private ["C11room_manage4user", "get_year"]
+- ["C11room_manage4user", "init"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "V11room_manage10AppUtility"
+- !private "PSo15CALayerDelegate"
+- "Ps7CVarArg"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- !private "Ps25ExpressibleByArrayLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps8Hashable"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- "PSo8NSCoding"
+- "PSo26NSExtensionRequestHandling"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "Ps9OptionSet"
+- !private "Ps16RawRepresentable"
+- !private "Ps10SetAlgebra"
+- !private "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- !private "PSo30UIContentSizeCategoryAdjusting"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "PSo11UIFocusItem"
+- !private "VSC26UIInterfaceOrientationMask"
+- !private "CSo7UILabel"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- "PSo16UIStateRestoring"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "Ps37_DefaultCustomPlaygroundQuickLookable"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps33_ExpressibleByStringInterpolation"
+- "Ps9_Hashable"
+- !private "Ps21_ObjectiveCBridgeable"
+- "C11room_manage18baseviewcontroller"
+- "C11room_manage10getDetails"
+- "C11room_manage7student"
+- "C11room_manage4user"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Metal.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
+interface-hash: "5402bade1ca4b767ef013c670db6de73"

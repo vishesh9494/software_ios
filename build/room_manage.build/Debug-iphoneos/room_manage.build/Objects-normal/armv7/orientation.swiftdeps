@@ -1,0 +1,181 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AppUtility"
+provides-nominal:
+- "V11room_manage10AppUtility"
+provides-member:
+- ["V11room_manage10AppUtility", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "AppDelegate"
+- "AppUtility"
+- "AssignmentPrecedence"
+- "CastingPrecedence"
+- !private "StringLiteralType"
+- !private "UIApplication"
+- !private "UIDevice"
+- "UIInterfaceOrientation"
+- "UIInterfaceOrientationMask"
+depends-member:
+- !private ["Ps9AnyObject", "current"]
+- !private ["Ps9AnyObject", "delegate"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "orientationLock"]
+- !private ["Ps9AnyObject", "setValue"]
+- !private ["Ps9AnyObject", "shared"]
+- !private ["C11room_manage11AppDelegate", "orientationLock"]
+- !private ["V11room_manage10AppUtility", "AppDelegate"]
+- !private ["V11room_manage10AppUtility", "UIApplication"]
+- !private ["V11room_manage10AppUtility", "UIDevice"]
+- ["V11room_manage10AppUtility", "UIInterfaceOrientation"]
+- ["V11room_manage10AppUtility", "UIInterfaceOrientationMask"]
+- ["V11room_manage10AppUtility", "init"]
+- ["V11room_manage10AppUtility", "lockOrientation"]
+- !private ["Ps7CVarArg", "current"]
+- !private ["Ps7CVarArg", "delegate"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "orientationLock"]
+- !private ["Ps7CVarArg", "setValue"]
+- !private ["Ps7CVarArg", "shared"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "current"]
+- !private ["Ps28CustomDebugStringConvertible", "delegate"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "orientationLock"]
+- !private ["Ps28CustomDebugStringConvertible", "setValue"]
+- !private ["Ps28CustomDebugStringConvertible", "shared"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "current"]
+- !private ["Ps23CustomStringConvertible", "delegate"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "orientationLock"]
+- !private ["Ps23CustomStringConvertible", "setValue"]
+- !private ["Ps23CustomStringConvertible", "shared"]
+- !private ["Ps9Equatable", "current"]
+- !private ["Ps9Equatable", "delegate"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "orientationLock"]
+- !private ["Ps9Equatable", "rawValue"]
+- !private ["Ps9Equatable", "setValue"]
+- !private ["Ps9Equatable", "shared"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps8Hashable", "current"]
+- !private ["Ps8Hashable", "delegate"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "orientationLock"]
+- !private ["Ps8Hashable", "rawValue"]
+- !private ["Ps8Hashable", "setValue"]
+- !private ["Ps8Hashable", "shared"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSObject", "current"]
+- !private ["CSo8NSObject", "delegate"]
+- !private ["CSo8NSObject", "orientationLock"]
+- !private ["CSo8NSObject", "setValue"]
+- !private ["CSo8NSObject", "shared"]
+- !private ["PSo16NSObjectProtocol", "current"]
+- !private ["PSo16NSObjectProtocol", "delegate"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "orientationLock"]
+- !private ["PSo16NSObjectProtocol", "setValue"]
+- !private ["PSo16NSObjectProtocol", "shared"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- !private ["Ps16RawRepresentable", "rawValue"]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["CSo13UIApplication", "delegate"]
+- !private ["CSo13UIApplication", "shared"]
+- !private ["PSo21UIApplicationDelegate", "orientationLock"]
+- !private ["CSo8UIDevice", "current"]
+- !private ["CSo8UIDevice", "setValue"]
+- !private ["OSC22UIInterfaceOrientation", "rawValue"]
+- !private ["CSo11UIResponder", "delegate"]
+- !private ["CSo11UIResponder", "orientationLock"]
+- !private ["CSo11UIResponder", "shared"]
+- !private ["PSo30UIResponderStandardEditActions", "delegate"]
+- !private ["PSo30UIResponderStandardEditActions", "orientationLock"]
+- !private ["PSo30UIResponderStandardEditActions", "shared"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps33_ExpressibleByStringInterpolation", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "current"]
+- !private ["Ps9_Hashable", "delegate"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "orientationLock"]
+- !private ["Ps9_Hashable", "rawValue"]
+- !private ["Ps9_Hashable", "setValue"]
+- !private ["Ps9_Hashable", "shared"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+depends-nominal:
+- !private "Ps9AnyObject"
+- !private "C11room_manage11AppDelegate"
+- "V11room_manage10AppUtility"
+- !private "Ps7CVarArg"
+- !private "Ps10Comparable"
+- !private "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- !private "Ps23CustomStringConvertible"
+- !private "Ps9Equatable"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- !private "Ps8Hashable"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "PSo16NSMutableCopying"
+- !private "CSo8NSObject"
+- !private "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "Ps16RawRepresentable"
+- !private "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "CSo13UIApplication"
+- !private "PSo21UIApplicationDelegate"
+- !private "CSo8UIDevice"
+- !private "OSC22UIInterfaceOrientation"
+- !private "CSo11UIResponder"
+- !private "PSo30UIResponderStandardEditActions"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps33_ExpressibleByStringInterpolation"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- !private "Ps9_Hashable"
+- !private "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Metal.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
+interface-hash: "94b786acb825554ca5d72e023d3cb4f5"

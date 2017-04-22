@@ -20,6 +20,10 @@ class getDetails: baseviewcontroller{
     @IBOutlet weak var mobile: UILabel!
     @IBOutlet weak var room: UILabel!
     
+    override func viewDidAppear(_ animated: Bool) {
+        AppUtility.lockOrientation(.portrait)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         name.text=stud.get_name()
@@ -28,7 +32,12 @@ class getDetails: baseviewcontroller{
         programme.text=stud.get_programme()
         year.text=String(stud.get_year())
         mobile.text=stud.get_mobile()
-        room.text=String(stud.get_room())
+        if(stud.get_room()==0){
+            room.text="Not Alloted"
+        }
+        else{
+            room.text=String(stud.get_room())
+        }
     }
     @IBAction func back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
